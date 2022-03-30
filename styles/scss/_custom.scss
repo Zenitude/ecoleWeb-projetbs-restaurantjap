@@ -1,0 +1,105 @@
+// Global 
+body
+{
+    font-family: $font-family-base;
+}
+
+.max-width-body
+{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+// Home header
+.home
+{
+    padding-bottom: 50vw;
+}
+
+nav
+{
+    z-index: 10;
+}
+
+.headNav li
+{
+    position: relative;
+}
+
+.headNav li::after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out
+}
+
+.headNav li:hover::after
+{
+    transform: scaleX(1);
+}
+
+.sushiHome
+{
+    width: 45%;
+    position: absolute;
+    top: 65%;
+    right: 0;
+    transform: translate(0,-50%);
+    z-index: auto;
+}
+
+@media screen and (max-width:1000px)
+{
+    .sushiHome
+    {
+        top: 65%;
+    }
+
+}
+
+@media screen and (max-width:900px)
+{
+    .sushiHome
+    {
+        top: 75%;
+    }
+}
+
+@media screen and (max-width:760px)
+{
+    .sushiHome
+    {
+        top: 85%;
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    .sushiHome
+    {
+        display: none;
+    }
+
+    .home
+    {
+        padding-bottom: 5vw;
+    }
+
+}
+
+#sectionChefsHome img
+{
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+// Menu
+.accordion-header button
+{
+    color: beige;
+}

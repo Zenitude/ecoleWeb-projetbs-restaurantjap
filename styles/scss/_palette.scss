@@ -1,0 +1,31 @@
+$main-red: #c70a0a;
+$shade-red-1: #c33838;
+$shade-red-2: #ebb3a9;
+$shade-red-3: #e87ea1;
+$beige: beige;
+$darkless: darkslategray;
+
+$theme-colors-perso: (
+    "mainRed": $main-red,
+    "shadeRed1": $shade-red-1,
+    "shadeRed2": $shade-red-2,
+    "shadeRed3": $shade-red-3,
+    "beige": $beige,
+    "darkless": $darkless,
+);
+
+$theme-colors: map.merge($theme-colors-perso, $theme-colors);
+
+@each $key, $val in $theme-colors-perso
+{
+    .bg-#{$key}
+    {
+        background-color: $val;
+    }
+
+    .text-#{$key}
+    {
+        color: $val;
+    }
+}
+
